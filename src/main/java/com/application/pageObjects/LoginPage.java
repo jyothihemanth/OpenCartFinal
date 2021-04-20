@@ -45,17 +45,59 @@ public class LoginPage extends BaseClass {
 	@FindBy(xpath = "//input[@id='dwfrm_login_username']")
 	WebElement LumensUserName;
 	
+	@FindBy(name = "email")
+	WebElement OpenCartUserName;
+	
+	@FindBy(xpath = "//div[@id='top-links']/ul/li[2]")
+	WebElement OpenCartMyAccount;
+	
+	@FindBy(xpath = "//ul[@class='dropdown-menu dropdown-menu-right']/li[2]")
+	WebElement OpenCartLogingBtn;
+	
 	@FindBy(xpath = "//input[@id='dwfrm_login_password']")
 	WebElement LumensPassd;
 	
+	@FindBy(name = "password")
+	WebElement OpenCartPassd;
+	
 	@FindBy(xpath = "//form[@id='dwfrm_login']/fieldset/div[3]/div[2]/button")
 	WebElement LumensLoginBtn;
+	
+	@FindBy(xpath = "//input[@type='submit']")
+	WebElement OpenCartUserLoginBtn;
 	
 	@FindBy(xpath = "//div[@class='logo']")
 	WebElement Lumens_Login_Logo;
 	
 	@FindBy(xpath = "//input[@id='dwfrm_login_rememberme']")
 	WebElement Lumens_Remember_Me_CheckBox;
+	
+	@FindBy(xpath = "//ul[@class='dropdown-menu dropdown-menu-right']/li[1]/a")
+	WebElement OpenCartRegisterBtn;
+	
+	@FindBy(xpath = "//input[@id='input-firstname']")
+	WebElement OpenCartRegisterFirstName;
+	
+	@FindBy(xpath = "//input[@id='input-lastname']")
+	WebElement OpenCartRegisterLastName;
+	
+	@FindBy(xpath = "//input[@id='input-email']")
+	WebElement OpenCartRegisterEmail;
+	
+	@FindBy(xpath = "//input[@id='input-telephone']")
+	WebElement OpenCartRegisterPhone;
+	
+	@FindBy(xpath = "//input[@id='input-password']")
+	WebElement OpenCartRegisterPass;
+	
+	@FindBy(xpath = "//input[@id='input-confirm']")
+	WebElement OpenCartRegisterConfirmPass;
+	
+	@FindBy(xpath = "//input[@name='agree']")
+	WebElement OpenCartRegisterPrivatePolicyCheckbox;
+	
+	@FindBy(xpath = "//input[@class='btn btn-primary']")
+	WebElement OpenCartRegisterContinueBtn;
 	
 	public LoginPage () 
 	{
@@ -80,6 +122,40 @@ public class LoginPage extends BaseClass {
 		ActionClass.type(LumensPassd, pwd);
 		ActionClass.click(driver, Lumens_Remember_Me_CheckBox);
 		ActionClass.click(driver, LumensLoginBtn);
+		return new HomePage();
+	}
+	
+	public HomePage loginToOpenCart(String usrName ,  String pwd) 
+	{
+		ActionClass.findelement(driver, OpenCartMyAccount);
+		ActionClass.click(driver, OpenCartMyAccount);
+		ActionClass.findelement(driver, OpenCartLogingBtn);
+		ActionClass.click(driver, OpenCartLogingBtn);
+		ActionClass.type(OpenCartUserName, usrName);
+		ActionClass.type(OpenCartPassd, pwd);
+		ActionClass.click(driver, OpenCartUserLoginBtn);
+		return new HomePage();
+	}
+	
+	public HomePage OpenCartRegisterPageModule(String FirstName,String LastName,String Email,String Phone,String Password) throws InterruptedException
+	{
+		ActionClass.findelement(driver, OpenCartMyAccount);
+		ActionClass.click(driver, OpenCartMyAccount);
+		ActionClass.findelement(driver, OpenCartRegisterBtn);
+		ActionClass.click(driver, OpenCartRegisterBtn);
+		ActionClass.type(OpenCartRegisterFirstName, FirstName);
+		ActionClass.type(OpenCartRegisterLastName, LastName);
+		ActionClass.type(OpenCartRegisterEmail, Email);
+		ActionClass.type(OpenCartRegisterPhone, Phone);
+		ActionClass.type(OpenCartRegisterPass, Password);
+		ActionClass.type(OpenCartRegisterConfirmPass, Password);
+		ActionClass.click(driver, OpenCartRegisterPrivatePolicyCheckbox);
+		Thread.sleep(1000);
+		ActionClass.click(driver, OpenCartRegisterContinueBtn);
+		Thread.sleep(1000);
+		
+		
+		
 		return new HomePage();
 	}
 

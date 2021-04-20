@@ -93,12 +93,12 @@ public class BaseClass {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 //		driver.get(prop.getProperty("url"));
-		driver.get(prop.getProperty("urlLumens"));
+		driver.get(prop.getProperty("urlDemocart"));
 	}
 	
 	public static void takeScreenshot(String filename) throws IOException {
 		File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(file, new File("C:\\Users\\Dikhit\\Downloads\\DikhitRanjanBehera-main\\DikhitRanjanBehera-main\\DemoProject\\ScreenShots"+filename+".png"));
+		FileUtils.copyFile(file, new File("C:\\Users\\admin\\git\\DemoHackathon\\DemoProject\\ScreenShots"+filename+".png"));
 	}
 	
 

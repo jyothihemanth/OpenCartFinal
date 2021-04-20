@@ -1,5 +1,14 @@
-[INFO ] 2021-04-09 11:14:00.480 [main] LoggerDemo - this is information message
-[ERROR] 2021-04-09 11:14:00.483 [main] LoggerDemo - this is error message
-[WARN ] 2021-04-09 11:14:00.483 [main] LoggerDemo - this is warning message
-[FATAL] 2021-04-09 11:14:00.483 [main] LoggerDemo - this is fatal message
-[INFO ] 2021-04-09 11:37:26.402 [main] MultiBrowserDemo - this is google page information
+[INFO ] 2021-04-20 12:07:35.061 [main] MultiBrowserDemo - user has Registred successfully in to openCart website successfully
+[INFO ] 2021-04-20 12:07:49.676 [main] MultiBrowserDemo - user has logged in to openCart website successfully
+[INFO ] 2021-04-20 12:07:52.500 [main] MultiBrowserDemo - user has successfully selected Mac product 
+[INFO ] 2021-04-20 12:11:39.450 [main] MultiBrowserDemo - user has Registred successfully in to openCart website successfully
+[INFO ] 2021-04-20 12:21:44.965 [main] MultiBrowserDemo - user has Registred successfully in to openCart website successfully
+[INFO ] 2021-04-20 12:22:00.270 [main] MultiBrowserDemo - user has logged in to openCart website successfully
+[INFO ] 2021-04-20 12:22:05.108 [main] MultiBrowserDemo - user has successfully selected Mac product 
+[INFO ] 2021-04-20 12:28:02.121 [main] MultiBrowserDemo - user has Registred successfully in to openCart website successfully
+[INFO ] 2021-04-20 12:28:16.786 [main] MultiBrowserDemo - user has logged in to openCart website successfully
+[INFO ] 2021-04-20 12:28:19.284 [main] MultiBrowserDemo - user has successfully selected Mac product 
+[INFO ] 2021-04-20 12:35:44.026 [main] MultiBrowserDemo - user has Registred successfully in to openCart website successfully
+[INFO ] 2021-04-20 12:35:58.631 [main] MultiBrowserDemo - user has logged in to openCart website successfully
+[INFO ] 2021-04-20 12:36:01.598 [main] MultiBrowserDemo - user has successfully selected Mac product 
+[INFO ] 2021-04-20 12:36:29.035 [main] MultiBrowserDemo - Coupon code successfully verified

@@ -19,6 +19,10 @@ public class CheckOutPage extends BaseClass {
 	
 	@FindBy(xpath = "//a[@class='logout']")
 	WebElement logout;
+	
+	@FindBy(xpath = "//p[@class='text-right']/a[2]")
+	WebElement opencartItemBasketCheckout;
+	
 
 	public CheckOutPage () 
 	{
@@ -48,5 +52,10 @@ public class CheckOutPage extends BaseClass {
 		ActionClass.click(driver, AccountLumens);
 		ActionClass.click(driver, logout);
 		return new LargeChandelierPage();
+	}
+	
+	public static void opencartItemBasketcheckout()
+	{
+	  driver.findElement(By.xpath("//p[@class='text-right']/a[2]")).click();
 	}
 }

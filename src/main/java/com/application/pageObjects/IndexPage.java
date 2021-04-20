@@ -89,5 +89,13 @@ public class IndexPage extends BaseClass {
 		ActionClass.isdisplayed(driver, LoginFlipkartBtn);
 	}
 	
+	public void verifyLogingopenCartSuccessful() {
+	    String actTitle ="My Account";
+		String pgTitle = driver.getTitle();
+		if(pgTitle.equalsIgnoreCase (actTitle)) {
+			System.out.println("Page Title verified, User login Successful");
+		}
+	}
+	
 	
 }
