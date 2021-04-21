@@ -1,6 +1,10 @@
-/**
- * 
- */
+/**  
+ * Name : HomePage.java
+	 * Created by : Dikhit,Jyothi
+	 * Date: 19/04/2021
+	 * Description: This Page class contains all the web Elements and methods related to Home page of the website
+     
+	 */
 package com.application.pageObjects;
 
 import java.io.FileInputStream;
@@ -15,10 +19,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.application.actionDriver.ActionClass;
 import com.application.basePackage.BaseClass;
 
-/**
- * @author DIKHIT
- *
- */
+
 public class HomePage extends BaseClass {
 	
 	productPage product=null;
@@ -75,13 +76,20 @@ public class HomePage extends BaseClass {
 		
 	}
 	
-	public  HomePage navigateProduct() 
+	/*public  HomePage navigateProduct() 
 	{
-		ActionClass.findelement(driver, Lightning);
+		//ActionClass.findelement(driver, Lightning);
 //		ActionClass.click(driver, Lightning);
 		return new HomePage();
-	}
+	}*/
 	
+	/**  
+	 * 
+		 * Created by :Dikhit
+		 * Date: 19/04/2021
+		 * Description: This method will navigate to the Desktop tab and selects Mac product
+	     
+		 */
 	public  HomePage navigateOpenCartDesktopProduct() 
 	{
 		ActionClass.findelement(driver, opencartDesktopProduct);
@@ -91,8 +99,16 @@ public class HomePage extends BaseClass {
 		return new HomePage();
 	}
 	
-	//navigate to Laptops and Nootebooks
-	public  void navigateOpenCartlaptopsandNotebooksProduct() 
+	/**  
+	 * 
+		 * Created by : Jyothi
+		 * Date: 19/04/2021
+		 * Description: This method will navigate to the laptopsandNotebooksProduct tab and selects HP product,
+		 * Modify the date of delivery,add to cart and checkout
+	 * @throws InterruptedException 
+	     
+		 */
+	public  void navigateOpenCartlaptopsandNotebooksProduct() throws InterruptedException 
 	{
 	
 		ActionClass.findelement(driver, opencartLaptopsNotebooksProduct);
@@ -137,6 +153,7 @@ public class HomePage extends BaseClass {
 		
 		
 		ActionClass.findelement(driver, opencartItemBasketcheckout) ;
+		Thread.sleep(2000);
 		ActionClass.click (driver,opencartItemBasketcheckout);
 		
 		//product.opencartproductcheckoutmandatorydata();
@@ -148,9 +165,7 @@ public class HomePage extends BaseClass {
 		//return new HomePage();
 	}
 	
-	public  LightningPage navigateLightning() {
-		
-		driver.navigate().to(lightningpageurl);
-		return new LightningPage();
-	}
+	
+	
+	
 }

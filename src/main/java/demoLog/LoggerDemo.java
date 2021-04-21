@@ -1,3 +1,10 @@
+/**
+ * Name: DemoLog
+ * Created By: Dikhit, Jyothi
+ * Date: 19/04/2021
+ * Description: This Page has a static method to take logs with the use of Log4J api
+ * 
+ */
 package demoLog;
 
 import org.apache.logging.log4j.LogManager;

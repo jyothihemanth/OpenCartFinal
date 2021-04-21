@@ -1,3 +1,9 @@
+/**
+ * Name: ExcelUtils
+ * Created By: Jyothi, Dikhit
+ * Date: 19/04/2021
+ * Description: This class contains all data reading methods from Excel file
+ */
 package com.application.utility;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -27,7 +33,12 @@ public class ExcelUtils extends BaseClass {
 		getCellDataString(0,0);
 		getCellDataNumeric(0,1);
 	}
-
+/**
+ * Created: Dikhit, Jyothi
+ * Date: 19/04/2021
+ * Description: This method is used to get Row count from Excel Sheet
+ * @return
+ */
 	public static int getRoCount() {
 		int rowCount=0;
 		try {
@@ -43,6 +54,12 @@ public class ExcelUtils extends BaseClass {
 		return rowCount;
 	}
 	
+	/**
+	 * Created: Dikhit, Jyothi
+	 * Date: 19/04/2021
+	 * Description: This method is used to get Coloumn count from Excel Sheet
+	 * @return
+	 */
 	public static int getColCount() {
 		int colCount=0;
 		try {
@@ -58,6 +75,12 @@ public class ExcelUtils extends BaseClass {
 		return colCount;
 	}
 
+	/**
+	 * Created: Dikhit, Jyothi
+	 * Date: 19/04/2021
+	 * Description: This method is used to get String Cell Data  from Excel Sheet
+	 * @return
+	 */
 	public static String getCellDataString(int rowNum , int colNum) {
 		String cellData = null;
 		try {
@@ -75,6 +98,12 @@ public class ExcelUtils extends BaseClass {
 
 	}
 	
+	/**
+	 * Created: Dikhit, Jyothi
+	 * Date: 19/04/2021
+	 * Description: This method is used to get Numeric Cell Data from Excel Sheet
+	 * @return
+	 */
 	public static void getCellDataNumeric(int rowNum , int colNum) {
 		try {
 

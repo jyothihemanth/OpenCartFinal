@@ -1,6 +1,9 @@
-/**
- * 
- */
+/**  Name:LoginPage.java
+	 * Created by : Dikhit,Jyothi
+	 * Date: 19/04/2021
+	 * Description: This page class contains all the web elements and methods related to login page of respective website
+     
+	 */
 package com.application.pageObjects;
 
 import org.openqa.selenium.By;
@@ -10,11 +13,6 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.application.actionDriver.ActionClass;
 import com.application.basePackage.BaseClass;
-
-/**
- * @author DIKHIT
- *
- */
 public class LoginPage extends BaseClass {
 	
 	@FindBy(id = "email")
@@ -99,13 +97,16 @@ public class LoginPage extends BaseClass {
 	@FindBy(xpath = "//input[@class='btn btn-primary']")
 	WebElement OpenCartRegisterContinueBtn;
 	
+	@FindBy(xpath = "//div[contains(text(),'Telephone must')]")
+	WebElement OpenCartRegisterPhoneNumberWarning;
+	
 	public LoginPage () 
 	{
 		PageFactory.initElements(driver, this);
 	}
 	
 	
-	public HomePage login(String usrName ,  String pwd) 
+	/*public HomePage login(String usrName ,  String pwd) 
 	{
 		ActionClass.findelement(driver, Flipkart_EnterUSer);
 		ActionClass.type(Flipkart_EnterUSer, usrName);
@@ -123,7 +124,13 @@ public class LoginPage extends BaseClass {
 		ActionClass.click(driver, Lumens_Remember_Me_CheckBox);
 		ActionClass.click(driver, LumensLoginBtn);
 		return new HomePage();
-	}
+	}*/
+	/**  
+	 * Created by : Dikhit,jyothi
+	 * Date: 19/04/2021
+	 * Description: This method performs login function
+     
+	 */
 	
 	public HomePage loginToOpenCart(String usrName ,  String pwd) 
 	{
@@ -137,6 +144,12 @@ public class LoginPage extends BaseClass {
 		return new HomePage();
 	}
 	
+	/**  
+	 * Created by : Jyothi
+	 * Date: 19/04/2021
+	 * Description: This method performs registration function
+     
+	 */
 	public HomePage OpenCartRegisterPageModule(String FirstName,String LastName,String Email,String Phone,String Password) throws InterruptedException
 	{
 		ActionClass.findelement(driver, OpenCartMyAccount);
@@ -158,8 +171,29 @@ public class LoginPage extends BaseClass {
 		
 		return new HomePage();
 	}
+	
+	/**
+	 * Created By: Dikhit, jyothi
+	 * Date: 19/04/2019
+	 * Description: This method will validate phone number is not entered while registering
+	 * @param expText
+	 * @return
+	 */
+	public  HomePage OpenCartVerifyPhoneNumberNotEntered(String expText) {
+	   WebElement ele = driver.findElement(By.xpath("//div[contains(text(),'Telephone must')]"));
+	   String errorMsgPhone= ele.getText();
+	   String errorMessagePhone= errorMsgPhone;
+	   if(errorMessagePhone.contains(expText)) {
+		   System.out.println(errorMessagePhone+" User has not Entered Phone Number");
+	   }
+	   else {
+		   System.out.println("Phone number present");
+	   }
+	return new HomePage();
+		 
+	}
 
-	public HomePage verifySuccesfulLogin() {
+	/*public HomePage verifySuccesfulLogin() {
 		ActionClass.findelement(driver, Flipkart_Login_Logo);
 		String actLogo = "Flipkart";
 		WebElement exp = driver.findElement(By.xpath("//div[@class='logo']"));
@@ -183,6 +217,6 @@ public class LoginPage extends BaseClass {
 	}
 	return null;
 
-	}
+	}*/
 	
 }

@@ -1,14 +1,34 @@
-[INFO ] 2021-04-20 12:07:35.061 [main] MultiBrowserDemo - user has Registred successfully in to openCart website successfully
-[INFO ] 2021-04-20 12:07:49.676 [main] MultiBrowserDemo - user has logged in to openCart website successfully
-[INFO ] 2021-04-20 12:07:52.500 [main] MultiBrowserDemo - user has successfully selected Mac product 
-[INFO ] 2021-04-20 12:11:39.450 [main] MultiBrowserDemo - user has Registred successfully in to openCart website successfully
-[INFO ] 2021-04-20 12:21:44.965 [main] MultiBrowserDemo - user has Registred successfully in to openCart website successfully
-[INFO ] 2021-04-20 12:22:00.270 [main] MultiBrowserDemo - user has logged in to openCart website successfully
-[INFO ] 2021-04-20 12:22:05.108 [main] MultiBrowserDemo - user has successfully selected Mac product 
-[INFO ] 2021-04-20 12:28:02.121 [main] MultiBrowserDemo - user has Registred successfully in to openCart website successfully
-[INFO ] 2021-04-20 12:28:16.786 [main] MultiBrowserDemo - user has logged in to openCart website successfully
-[INFO ] 2021-04-20 12:28:19.284 [main] MultiBrowserDemo - user has successfully selected Mac product 
-[INFO ] 2021-04-20 12:35:44.026 [main] MultiBrowserDemo - user has Registred successfully in to openCart website successfully
-[INFO ] 2021-04-20 12:35:58.631 [main] MultiBrowserDemo - user has logged in to openCart website successfully
-[INFO ] 2021-04-20 12:36:01.598 [main] MultiBrowserDemo - user has successfully selected Mac product 
-[INFO ] 2021-04-20 12:36:29.035 [main] MultiBrowserDemo - Coupon code successfully verified
+[INFO ] 2021-04-20 15:06:37.292 [main] Login_OpenCart - user has Registred successfully in to openCart website successfully
+[INFO ] 2021-04-20 15:06:52.001 [main] Login_OpenCart - user has logged in to openCart website successfully
+[INFO ] 2021-04-20 15:06:56.059 [main] Login_OpenCart - user has successfully selected Mac product 
+[INFO ] 2021-04-20 15:07:26.751 [main] Login_OpenCart - Coupon code successfully verified
+[INFO ] 2021-04-21 12:14:51.596 [main] RegisterUser_OpenCart_Test - user has Registred successfully in to openCart website successfully
+[INFO ] 2021-04-21 12:34:45.642 [main] TC02_VerifyUserNotAbleToCreateAccount_Test - user is not able to register in OpenCart.com
+[INFO ] 2021-04-21 12:37:28.127 [main] TC02_VerifyUserNotAbleToCreateAccount_Test - user is not able to register in OpenCart.com
+[INFO ] 2021-04-21 12:40:15.096 [main] TC02_VerifyUserNotAbleToCreateAccount_Test - user is not able to register in OpenCart.com
+[INFO ] 2021-04-21 12:41:33.677 [main] TC02_VerifyUserNotAbleToCreateAccount_Test - user is not able to register in OpenCart.com
+[INFO ] 2021-04-21 13:15:01.625 [main] TC02_VerifyUserNotAbleToCreateAccount_Test - user is not able to register in OpenCart.com
+[INFO ] 2021-04-21 13:17:38.358 [main] TC02_VerifyUserNotAbleToCreateAccount_Test - user is not able to register in OpenCart.com
+[INFO ] 2021-04-21 13:21:28.311 [main] TC02_VerifyUserNotAbleToCreateAccount_Test - user is not able to register in OpenCart.com
+[INFO ] 2021-04-21 13:49:04.525 [main] Login_Open_Cart_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-21 14:05:58.710 [main] TC03_OpenCart_Login_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-21 14:11:49.800 [main] TC04_VerifyTitle_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-21 14:11:50.261 [main] TC04_VerifyTitle_Test - Page Title is Verified
+[INFO ] 2021-04-21 14:23:51.043 [main] TC03_OpenCart_Login_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-21 14:23:53.807 [main] TC03_OpenCart_Login_Test - user has successfully selected Mac product 
+[INFO ] 2021-04-21 14:23:54.321 [main] TC03_OpenCart_Login_Test - user has successfully selected Mac product 
+[INFO ] 2021-04-21 15:05:52.679 [main] TC06_OpenCart_Show_All_Laptops_Notebook_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-21 15:10:43.894 [main] TC06_OpenCart_Show_All_Laptops_Notebook_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-21 15:23:34.524 [main] TC06_OpenCart_Show_All_Laptops_Notebook_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-21 15:25:26.325 [main] TC06_OpenCart_Show_All_Laptops_Notebook_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-21 15:30:32.377 [main] TC06_OpenCart_Show_All_Laptops_Notebook_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-21 15:37:01.015 [main] TC06_OpenCart_Show_All_Laptops_Notebook_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-21 15:56:17.913 [main] TC06_OpenCart_Show_All_Laptops_Notebook_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-21 16:05:04.589 [main] TC06_OpenCart_Show_All_Laptops_Notebook_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-21 16:13:52.560 [main] TC06_OpenCart_Show_All_Laptops_Notebook_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-21 16:20:01.002 [main] TC06_OpenCart_Show_All_Laptops_Notebook_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-21 16:31:15.360 [main] TC06_OpenCart_Show_All_Laptops_Notebook_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-21 16:33:02.655 [main] TC06_OpenCart_Show_All_Laptops_Notebook_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-21 17:30:03.021 [main] TC07_OpenCart_Show_All_Laptops_Notebook_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-21 17:35:41.067 [main] TC07_OpenCart_Show_All_Laptops_Notebook_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-21 17:43:07.304 [main] TC07_OpenCart_Show_All_Laptops_Notebook_Test - user has logged in to openCart website successfully

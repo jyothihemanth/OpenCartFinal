@@ -1,3 +1,9 @@
+/**  Name:IndexPage.java
+	 * Created by : Dikhit
+	 * Date: 19/04/2021
+	 * Description: This page class contains all the web elements and methods related to verification of login
+     
+	 */
 package com.application.pageObjects;
 
 import javax.xml.xpath.XPath;
@@ -83,12 +89,12 @@ public class IndexPage extends BaseClass {
 		return new IndexPage();
 		
 	} 
-	
-	public void verifyLable() {
-		ActionClass.findelement(driver,LoginFlipkartBtn);
-		ActionClass.isdisplayed(driver, LoginFlipkartBtn);
-	}
-	
+	/** 
+	 * Created by : Dikhit
+	 * Date: 19/04/2021
+	 * Description: This method used to verify successful login     
+	 */
+		
 	public void verifyLogingopenCartSuccessful() {
 	    String actTitle ="My Account";
 		String pgTitle = driver.getTitle();

@@ -1,3 +1,9 @@
+/**
+ * Name: ExcelUtilDemo
+ * Created By: Jyothi, Dikhit
+ * Date: 19/04/2021
+ * Decsription: This class is to test Excel Data reading method functions correctly
+ */
 package com.application.utility;
 
 public class ExcelUtilDemo {

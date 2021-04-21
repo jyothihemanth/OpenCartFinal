@@ -1,3 +1,10 @@
+
+/**  Name : CheckOutPage.java
+	 * Created by : Dikhit
+	 * Date: 19/04/2021
+	 * Description: This page class contains all the web element and methods related to product checkout
+     
+	 */
 package com.application.pageObjects;
 
 import org.openqa.selenium.By;
@@ -23,12 +30,23 @@ public class CheckOutPage extends BaseClass {
 	@FindBy(xpath = "//p[@class='text-right']/a[2]")
 	WebElement opencartItemBasketCheckout;
 	
-
+	/** 
+	 * Created by : Dikhit
+	 * Date: 19/04/2021
+	 * Description: This is the constructor to initialize values
+     
+	 */
 	public CheckOutPage () 
 	{
 		PageFactory.initElements(driver, this);
 	}
 	
+	/**  
+	 * Created by : Dikhit
+	 * Date: 19/04/2021
+	 * Description: This method to increase the quantity of the product
+     
+	 */
 	public void increaseQuantityAndEnterPromo() {
 		driver.findElement(By.xpath("//span[@class='qty-increment-decrement qty-increment']")).click();
 		driver.findElement(By.xpath("//input[@name='dwfrm_cart_couponCode']")).sendKeys("COUPON");
@@ -48,12 +66,11 @@ public class CheckOutPage extends BaseClass {
 
 	}
 	
-	public LargeChandelierPage logoutLumens() {
-		ActionClass.click(driver, AccountLumens);
-		ActionClass.click(driver, logout);
-		return new LargeChandelierPage();
-	}
-	
+	/**  
+	 * Created by : Jyothi
+	 * Date: 19/04/2021
+	 * Description: This method identify checkout button and click on it     
+	 */
 	public static void opencartItemBasketcheckout()
 	{
 	  driver.findElement(By.xpath("//p[@class='text-right']/a[2]")).click();

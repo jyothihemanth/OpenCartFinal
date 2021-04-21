@@ -1,3 +1,9 @@
+/**
+ * Name: ExcelDataprovided
+ * Created By: Dikhit, jyothi
+ * Date: 19/04/2021
+ * Description: This class contains method and function to take data from excel file and do a login functionality
+ */
 package com.application.utility;
 
 import java.io.IOException;

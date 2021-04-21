@@ -1,3 +1,10 @@
+/**
+ * Name : ActionClass.Java
+ * Created by: Jyothi and Dikhit
+ * Date: 19/04/2021
+ * Description: This page contains all reusable browser and element interaction function of Selenium WebDriver
+ */
+
 package com.application.actionDriver;
 
 import java.util.Set;
@@ -12,21 +19,42 @@ import com.application.basePackage.BaseClass;
 import com.application.pageObjects.IndexPage;
 
 public class ActionClass extends BaseClass {
-	
+
+	/**
+	 * Created by : Dikhit
+	 * Date: 19/04/2021
+	 * Description: This method click on the weblement
+	 * @param driver
+	 * @param elem
+	 */
+
 	public static void click (WebDriver driver, WebElement elem) {
 		Actions act = new Actions(driver);
 		act.moveToElement(elem).click().build().perform();
 	}
-	
+
+	/**
+	 * Created by : Dikhit
+	 * Date: 19/04/2021
+	 * Description: This method click on the weblement (Normal Click)
+	 * @param driver
+	 * @param elem
+	 */
 	public static void click1 (WebDriver driver, WebElement elem) {
 		Actions act = new Actions(driver);
 		act.click();
 	}
-	
+	/**
+	 * Created by : Dikhit
+	 * Date: 19/04/2021
+	 * Description: This method find  webelement on the page
+	 * @param driver
+	 * @param elem
+	 */
 	public static boolean findelement(WebDriver driver , WebElement elem) {
 		boolean flag = false;
 		try {
-		elem.isDisplayed();	
+			elem.isDisplayed();	
 			flag= true;
 		} 
 		catch (Exception e) 
@@ -43,7 +71,14 @@ public class ActionClass extends BaseClass {
 		}
 		return flag;
 	}
-	
+
+	/**
+	 * Created by : Dikhit
+	 * Date: 19/04/2021
+	 * Description: This method to pass the string values to the webpage
+	 * @param driver
+	 * @param elem
+	 */
 	public static void type(WebElement elem, String text) {
 		try {
 			Thread.sleep(5000);
@@ -54,7 +89,14 @@ public class ActionClass extends BaseClass {
 			System.out.println("Locator not found");
 		}
 	}
-	
+
+	/**
+	 * Created by : Dikhit
+	 * Date: 19/04/2021
+	 * Description: This method to verify the visibility of the web element in the webpage
+	 * @param driver
+	 * @param elem
+	 */
 	public static boolean isdisplayed( WebDriver driver, WebElement elem) {
 		boolean flag = false;
 		flag = findelement(driver, elem);
@@ -73,9 +115,16 @@ public class ActionClass extends BaseClass {
 		}
 		return flag;	
 	}
-	
+
+	/**
+	 * Created by : Dikhit
+	 * Date: 19/04/2021
+	 * Description: This method to verify url
+	 * @param driver
+	 * @param elem
+	 */
 	public static void correctWebsite(String actUrl) {
-		
+
 		String expUrl = driver.getCurrentUrl();
 		if (expUrl.contains(actUrl)) {
 			System.out.println("User is in correct website");
@@ -83,9 +132,15 @@ public class ActionClass extends BaseClass {
 		else {
 			System.out.println("user entered a incorrect url");
 		}
-		
+
 	} 
-	
+	/**
+	 * Created by : Dikhit
+	 * Date: 19/04/2021
+	 * Description: This method to switch control between windows
+	 * @param driver
+	 * @param elem
+	 */
 	public boolean switchToNewWindow(WebDriver driver) {
 		boolean flag = false;
 		try {
@@ -106,7 +161,7 @@ public class ActionClass extends BaseClass {
 			}
 		}
 	}
-	
-	
+
+
 }	
 
