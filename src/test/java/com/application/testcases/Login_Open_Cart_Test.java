@@ -67,18 +67,18 @@ public class Login_Open_Cart_Test extends BaseClass {
 	public void Login() throws Exception {
 		extent.createTest("OpenCartTest");
 		
-		/*//OpenCart Registration Module
+		//OpenCart Registration Module
 		login.OpenCartRegisterPageModule(prop.getProperty("OpenCartRegisterFirstName"),prop.getProperty("OpenCartRegisterLastName"),prop.getProperty("OpenCartRegisterEmail"),
 				prop.getProperty("OpenCartRegisterTelephone"),prop.getProperty("OpenCartRegisterPassword"));
 		takeScreenshot("Registration success");
-		logger.info("user has Registred successfully in to openCart website successfully");*/
+		logger.info("user has Registred successfully in to openCart website successfully");
 		
 		//OpenCart Login Module
 		home= login.loginToOpenCart(prop.getProperty("OpenCartUserName") ,  prop.getProperty("OpenCartPassword"));
 		index.verifyLogingopenCartSuccessful();
 		logger.info("user has logged in to openCart website successfully");
 		
-		/*//OpenCart Product Selection
+		//OpenCart Product Selection
 		home.navigateOpenCartDesktopProduct();
 		logger.info("user has successfully selected Mac product ");
 		takeScreenshot("Product Selection is successfull");
@@ -89,7 +89,7 @@ public class Login_Open_Cart_Test extends BaseClass {
 		product.opencartproductcheckoutmandatorydata();
         product.opencartapplycouponcode();
         takeScreenshot("Coupon code Verification done");
-        logger.info("Coupon code successfully verified");*/
+        logger.info("Coupon code successfully verified");
 		
 		
 	}

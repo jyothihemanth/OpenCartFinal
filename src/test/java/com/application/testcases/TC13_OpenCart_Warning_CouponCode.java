@@ -1,6 +1,9 @@
-/**
- * 
+/**Test Case Name : TC13_OpenCart_Warning_CouponCode
+ * Author: Jyothi
+ * Date of Creation: 19/04/2021
+ * Description: This test case will login into website, print warning of missing apply coupon code
  */
+
 package com.application.testcases;
 
 import org.apache.logging.log4j.LogManager;
@@ -17,14 +20,8 @@ import com.application.pageObjects.IndexPage;
 import com.application.pageObjects.LoginPage;
 import com.application.pageObjects.productPage;
 
-/**Test Case Name : TC06_OpenCart_Show_All_Laptops_Notebook_Test
- * Author: Dikhit, Jyothi
- * Date of Creation: 19/04/2021
- * Description: This test case will add HP product to cart , Verify user is able to place an order in open cart application with guest checkout option
- */
-
-public class TC07_OpenCart_Show_All_Laptops_Notebook_Test extends BaseClass {
-	public static Logger logger = LogManager.getLogger(TC07_OpenCart_Show_All_Laptops_Notebook_Test.class);
+public class TC13_OpenCart_Warning_CouponCode extends BaseClass {
+	public static Logger logger = LogManager.getLogger(TC03_OpenCart_Login_Test.class);
 
 	IndexPage index;
 	LoginPage login;
@@ -34,8 +31,8 @@ public class TC07_OpenCart_Show_All_Laptops_Notebook_Test extends BaseClass {
 	CheckOutPage checkOut;
 
 	@BeforeMethod ()
-	public void setup() { //launching chrome browser
-		launchApp();    //will launch chrome and go to opencart
+	public void setup() { //launching chrome browser and accessing url of lumen
+		launchApp();    //will launch chrome and go to lumen
 		if (index== null) {
 			index= new IndexPage();
 		}
@@ -59,28 +56,29 @@ public class TC07_OpenCart_Show_All_Laptops_Notebook_Test extends BaseClass {
 	}
 
 	@AfterMethod
-	public void tearDown() 
-	{
+	public void tearDown() {
 		driver.quit();
 	}
 	@Test (priority = -1, enabled = true) 
-	public void Login() throws Exception 
-	{
+	public void Login() throws Exception {
 		extent.createTest("OpenCartTest");
 
 
 		//OpenCart Login Module
+		
 		home= login.loginToOpenCart(prop.getProperty("OpenCartUserName") ,  prop.getProperty("OpenCartPassword"));
 		index.verifyLogingopenCartSuccessful();
 		logger.info("user has logged in to openCart website successfully");
-		home.navigateOpenCartlaptopsandNotebooksProduct();
+
+		//OpenCart Product Selection and apply coupon code
 		
-//		checkOut=product.OpenCartClickOnGuestCheckOut();
-//		product.OpenCartFillBillingMandatoryDetails(prop.getProperty("OpenCartBillingFirstName"),prop.getProperty("OpenCartBillingLastName"),prop.getProperty("OpenCartBillingAddress1"),
-//				prop.getProperty("OpenCartBillingCity"),prop.getProperty("OpenCartBillingPostcode"));
+		product.opencartcouponcodemissingwarning();
 		
+		logger.info("Coupon code missing");
+		takeScreenshot("Coupon code missing");
 		
 	}
+
 
 
 }

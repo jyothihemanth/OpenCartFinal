@@ -11,6 +11,7 @@ import java.io.FileInputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -64,6 +65,19 @@ public class HomePage extends BaseClass {
 	@FindBy(xpath="//p[@class='text-right']/a[2]")
 	WebElement opencartItemBasketcheckout;
 	
+	@FindBy(xpath ="//i[@class='fa fa-shopping-cart']")
+	WebElement opencartShippingTab;
+	
+	@FindBy(xpath = "//i[@class='fa fa-times-circle']")
+	WebElement OpencartShippingTabRemoveProd;
+	
+	@FindBy(xpath = "//a[@class='btn btn-primary']")
+	WebElement OpencartShippingTabContinue;
+	
+	@FindBy(xpath = "//input[@id='input-quantity']")
+	WebElement opencartQuantity;
+	
+	@FindBy (xpath = "//a[text()='Edit Account']")WebElement OpencartEditAccountBtn;
 	
 	
 	public HomePage () 
@@ -138,11 +152,11 @@ public class HomePage extends BaseClass {
 		
 		ActionClass.click (driver, opencartSelectHPProduct);
 		
-		ActionClass.findelement(driver, opencartCalenderSelect);
+	    ActionClass.findelement(driver, opencartCalenderSelect);
 		ActionClass.click (driver, opencartCalenderSelect);
 		
 		ActionClass.findelement(driver, opencartCalenderSelectDATE) ;
-		ActionClass.click (driver,opencartCalenderSelectDATE);
+		ActionClass.click (driver,opencartCalenderSelectDATE); 
 		
         ActionClass.findelement(driver, opencartAddToCart) ;
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -154,7 +168,7 @@ public class HomePage extends BaseClass {
 		
 		ActionClass.findelement(driver, opencartItemBasketcheckout) ;
 		Thread.sleep(2000);
-		ActionClass.click (driver,opencartItemBasketcheckout);
+		ActionClass.click (driver,opencartItemBasketcheckout); 
 		
 		//product.opencartproductcheckoutmandatorydata();
 		
@@ -165,6 +179,121 @@ public class HomePage extends BaseClass {
 		//return new HomePage();
 	}
 	
+	public  void OpenCartlaptopsandNotebooksAddProducts() throws InterruptedException 
+	{
+	
+		ActionClass.findelement(driver, opencartLaptopsNotebooksProduct);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		ActionClass.click (driver, opencartLaptopsNotebooksProduct);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		ActionClass.findelement(driver, opencartShowAllLaptopNotebooks);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		ActionClass.click (driver, opencartShowAllLaptopNotebooks);
+		ActionClass.findelement(driver, opencartSelectHPProduct);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		ActionClass.click (driver, opencartSelectHPProduct);
+		
+	    ActionClass.findelement(driver, opencartAddToCart) ;
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		ActionClass.click (driver,opencartAddToCart);
+		
+		ActionClass.findelement(driver, opencartShippingTab) ;
+		ActionClass.click (driver,opencartShippingTab);
+		
+		ActionClass.findelement(driver, OpencartShippingTabRemoveProd) ;
+		ActionClass.click (driver,OpencartShippingTabRemoveProd);
+		
+		ActionClass.findelement(driver, OpencartShippingTabContinue) ;
+		ActionClass.click (driver, OpencartShippingTabContinue);
+	
+	}
+	
+	public  void OpenCartlaptopsandNotebooksAddProducts_CouponApply() throws InterruptedException 
+	{
+	
+		ActionClass.findelement(driver, opencartLaptopsNotebooksProduct);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		ActionClass.click (driver, opencartLaptopsNotebooksProduct);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		ActionClass.findelement(driver, opencartShowAllLaptopNotebooks);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		ActionClass.click (driver, opencartShowAllLaptopNotebooks);
+		ActionClass.findelement(driver, opencartSelectHPProduct);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		ActionClass.click (driver, opencartSelectHPProduct);
+		//Change Delivery date
+		ActionClass.findelement(driver, opencartCalenderSelect);
+		ActionClass.click (driver, opencartCalenderSelect);
+		
+		ActionClass.findelement(driver, opencartCalenderSelectDATE) ;
+		ActionClass.click (driver,opencartCalenderSelectDATE); 
+		//Change the quantity
+		
+	  //  ActionClass.findelement(driver, opencartQuantity);
+	//	 setquantityApplyCoupon.sendKeys("2");
+		//ActionClass.click (driver, opencartQuantity);
+		
+		
+	    ActionClass.findelement(driver, opencartAddToCart) ;
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		ActionClass.click (driver,opencartAddToCart);
+		
+		ActionClass.findelement(driver, opencartShippingTab) ;
+		ActionClass.click (driver,opencartShippingTab);
+		
+		product.opencartapplycouponcode();
+		
+		ActionClass.findelement(driver, OpencartShippingTabContinue) ;
+		ActionClass.click (driver, OpencartShippingTabContinue);
+	
+	}
+	
+	public HomePage editAccount() throws InterruptedException
+	{
+		ActionClass.findelement(driver, OpencartEditAccountBtn) ;
+		ActionClass.click (driver,OpencartEditAccountBtn);
+		driver.findElement(By.xpath("//input[@id='input-lastname']")).sendKeys("Bhat");
+		driver.findElement(By.xpath("//input[@class='btn btn-primary']")).click();
+		String succmsg_editAcc = driver.findElement(By.xpath("//i[@class='fa fa-check-circle']")).getText();
+		System.out.println(succmsg_editAcc);
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("/html/body/div[2]/div[2]/aside/div/a[13]")).click();
+		
+		return new HomePage();
+				
+	}
 	
 	
 	

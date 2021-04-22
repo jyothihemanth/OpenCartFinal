@@ -10,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -42,6 +43,13 @@ public class productPage extends BaseClass {
 	
 	@FindBy(xpath = "//input[@id='button-shipping-address']")
 	WebElement OpenCartShippingContinueBtn;
+	
+	@FindBy(xpath ="//i[@class='fa fa-shopping-cart']")
+	static 	WebElement opencartShippingTab;
+	
+	@FindBy(xpath ="//*[@id=\"search\"]/input")
+	static 	WebElement opencartSearchIphone;
+	
 	
 	
 	public productPage () 
@@ -120,7 +128,7 @@ public class productPage extends BaseClass {
 	/** 
 	 * Created by : Jyothi
 	 * Date: 19/04/2021
-	 * Description: This method used to coupon code
+	 * Description: This method used to apply coupon code
      
 	 */
 	public static void opencartapplycouponcode()
@@ -128,14 +136,38 @@ public class productPage extends BaseClass {
 		driver.findElement(By.xpath("//a[text()='Use Coupon Code ']")).click();
 		driver.findElement(By.xpath("//input[@id='input-coupon']")).sendKeys("XYZA");
 		driver.findElement(By.xpath("//input[@id='button-coupon']")).click();
+	//	WebElement errormsg = driver.findElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']"));
+	//	String Error = errormsg.getText();
+	//	String errorMessage = "Warning";
+	//	if(Error.contains(errorMessage)) {
+	//		System.out.println("Wrong Coupon Code Entered");
+		}
+	
+	/** 
+	 * Created by : Jyothi
+	 * Date: 19/04/2021
+	 * Description: This method used print warning without applying coupon code
+	 * @throws InterruptedException 
+     
+	 */
+	public static void opencartcouponcodemissingwarning() throws InterruptedException
+	{
+		ActionClass.findelement(driver, opencartShippingTab) ;
+		ActionClass.click (driver,opencartShippingTab);
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//a[text()='Use Coupon Code ']")).click();
+		Thread.sleep(1000);
+	//	driver.findElement(By.xpath("//input[@id='input-coupon']")).sendKeys("XYZA");
+		driver.findElement(By.xpath("//input[@id='button-coupon']")).click();
+		Thread.sleep(1000);
 		WebElement errormsg = driver.findElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']"));
+		Thread.sleep(1000);
 		String Error = errormsg.getText();
 		String errorMessage = "Warning";
 		if(Error.contains(errorMessage)) {
 			System.out.println("Wrong Coupon Code Entered");
 		}
 	}
-	
 	/** 
 	 * Created by : Jyothi
 	 * Date: 19/04/2021
@@ -158,6 +190,7 @@ public class productPage extends BaseClass {
 	 * Description: This method used to fill mandatory details in billing
      
 	 */
+	
 	public CheckOutPage OpenCartFillBillingMandatoryDetails(String FName,String LName,String Add1,String City,String PostCode) throws InterruptedException
 	{ 
 						
@@ -182,6 +215,33 @@ public class productPage extends BaseClass {
 	
 		
 	}
+	
+	/** 
+	 * Created by : Jyothi
+	 * Date: 19/04/2021
+	 * Description: This method used search and add iphone
+     need to check****self
+	 * @throws InterruptedException ****
+	 */
+	public static void OpenCartSerachIphone() throws InterruptedException
+	{
+		Thread.sleep(1000);
+		
+		Actions act = new Actions(driver);
+		act.moveToElement(opencartSearchIphone).click().build().perform();
+		opencartSearchIphone.sendKeys("iphone");
+		driver.findElement(By.xpath("//i[@class='fa fa-search']")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//*[@id=\"content\"]/div[3]/div/div/div[1]/a/img ")).click();
+		driver.findElement(By.xpath("//*[@id=\"input-quantity\"] ")).sendKeys("2");
+		Thread.sleep(1000);
+        driver.findElement(By.xpath("//button[@class='btn btn-primary btn-lg btn-block']")).click();
+        driver.findElement(By.xpath("//*[@id=\"top-links\"]/ul/li[4]/a/i")).click();
+        driver.findElement(By.xpath("//*[@id=\"content\"]/div[3]/div[2]/a ")).click();
+       		
+	}
+	
+	
 	
 
 }

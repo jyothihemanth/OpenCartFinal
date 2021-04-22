@@ -32,3 +32,34 @@
 [INFO ] 2021-04-21 17:30:03.021 [main] TC07_OpenCart_Show_All_Laptops_Notebook_Test - user has logged in to openCart website successfully
 [INFO ] 2021-04-21 17:35:41.067 [main] TC07_OpenCart_Show_All_Laptops_Notebook_Test - user has logged in to openCart website successfully
 [INFO ] 2021-04-21 17:43:07.304 [main] TC07_OpenCart_Show_All_Laptops_Notebook_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-22 12:06:38.603 [main] TC07_OpenCart_Show_All_Laptops_Notebook_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-22 15:17:33.415 [main] TC03_OpenCart_Login_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-22 15:19:02.454 [main] TC03_OpenCart_Login_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-22 15:23:00.789 [main] TC03_OpenCart_Login_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-22 16:02:02.383 [main] TC03_OpenCart_Login_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-22 16:04:14.719 [main] TC03_OpenCart_Login_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-22 16:04:33.083 [main] TC03_OpenCart_Login_Test - Coupon code eneterd successfully
+[INFO ] 2021-04-22 16:13:27.025 [main] TC03_OpenCart_Login_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-22 16:43:13.656 [main] TC03_OpenCart_Login_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-22 16:46:56.729 [main] TC03_OpenCart_Login_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-22 16:47:02.802 [main] TC03_OpenCart_Login_Test - Coupon code missing
+[INFO ] 2021-04-22 17:22:37.742 [main] TC03_OpenCart_Login_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-22 17:22:44.337 [main] TC03_OpenCart_Login_Test - user has edited last name successfully
+[INFO ] 2021-04-22 17:25:42.653 [main] TC03_OpenCart_Login_Test - user has logged in to openCart website successfully
+[INFO ] 2021-04-22 17:25:51.139 [main] TC03_OpenCart_Login_Test - user has edited last name successfully
+[INFO ] 2021-04-22 17:43:19.323 [main] TC10_OpenCart_SearchandAdd_Iphone - user has logged in to openCart website successfully
+[INFO ] 2021-04-22 17:46:33.654 [main] TC10_OpenCart_SearchandAdd_Iphone - user has logged in to openCart website successfully
+[INFO ] 2021-04-22 17:47:44.929 [main] TC10_OpenCart_SearchandAdd_Iphone - user has logged in to openCart website successfully
+[INFO ] 2021-04-22 17:51:02.433 [main] TC10_OpenCart_SearchandAdd_Iphone - user has logged in to openCart website successfully
+[INFO ] 2021-04-22 17:52:42.825 [main] TC10_OpenCart_SearchandAdd_Iphone - user has logged in to openCart website successfully
+[INFO ] 2021-04-22 17:56:04.139 [main] TC10_OpenCart_SearchandAdd_Iphone - user has logged in to openCart website successfully
+[INFO ] 2021-04-22 17:57:47.531 [main] TC10_OpenCart_SearchandAdd_Iphone - user has logged in to openCart website successfully
+[INFO ] 2021-04-22 18:00:38.357 [main] TC10_OpenCart_SearchandAdd_Iphone - user has logged in to openCart website successfully
+[INFO ] 2021-04-22 18:04:54.816 [main] TC10_OpenCart_SearchandAdd_Iphone - user has logged in to openCart website successfully
+[INFO ] 2021-04-22 18:07:52.114 [main] TC10_OpenCart_SearchandAdd_Iphone - user has logged in to openCart website successfully
+[INFO ] 2021-04-22 18:11:13.101 [main] TC10_OpenCart_SearchandAdd_Iphone - user has logged in to openCart website successfully
+[INFO ] 2021-04-22 18:11:27.921 [main] TC10_OpenCart_SearchandAdd_Iphone - Product is not available
+[INFO ] 2021-04-22 18:22:57.576 [main] TC10_OpenCart_Search_Iphone - user has logged in to openCart website successfully
+[INFO ] 2021-04-22 18:23:13.093 [main] TC10_OpenCart_Search_Iphone - Selected product is not available
+[INFO ] 2021-04-22 18:24:49.937 [main] TC10_OpenCart_Search_Iphone - user has logged in to openCart website successfully
+[INFO ] 2021-04-22 18:25:04.099 [main] TC10_OpenCart_Search_Iphone - Selected product is not available

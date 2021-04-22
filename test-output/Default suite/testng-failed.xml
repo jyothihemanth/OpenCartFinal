@@ -3,16 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.application.testcases.TC07_OpenCart_Show_All_Laptops_Notebook_Test">
+      <class name="com.application.testcases.TC10_OpenCart_SearchandAdd_Iphone">
         <methods>
           <include name="setExtent"/>
+          <include name="Login"/>
           <include name="loadConfig"/>
           <include name="endReport"/>
           <include name="setup"/>
-          <include name="Login"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.application.testcases.TC07_OpenCart_Show_All_Laptops_Notebook_Test -->
+      </class> <!-- com.application.testcases.TC10_OpenCart_SearchandAdd_Iphone -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
